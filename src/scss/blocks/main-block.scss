@@ -57,10 +57,12 @@
         gap: 15px;
     }
     &__img {
-
     }
     &__button {
         position: absolute;
+        top: 50%;
+        right: 88%;
+        
         background-color: var(--accent-color);
         color: #fff;
         text-align: center;
@@ -70,9 +72,13 @@
         outline-offset: 15px;
         outline: 1px solid rgb(0, 0, 255, 0.3);
         transition: all .1s ease;
-        
     }
     &__button:active {
         outline-offset: 5px;
+    }
+    &__box {
+        position: relative;
+        min-width: 650px;
+        min-height: 540px;
     }
 }
