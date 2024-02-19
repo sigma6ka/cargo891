@@ -1,0 +1,62 @@
+.about {
+  padding: 100px 0;
+  background-color: #fff;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    min-width: 650px;
+  }
+
+  &__content {
+  }
+
+  &__content-title {
+    font-weight: 600;
+    font-size: 24px;
+
+    & > span {
+      color: var(--accent-color);
+    }
+
+    margin-bottom: 25px;
+  }
+
+  &__content-desc {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--secondary-text-color);
+
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__advant {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+.about-advant {
+  &__item {
+    text-align: center;
+  }
+
+  &__item-title {
+    font-weight: 500;
+    font-size: 48px;
+    color: var(--accent-color);
+  }
+
+  &__item-desc {
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
