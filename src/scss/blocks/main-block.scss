@@ -1,84 +1,96 @@
-.page {
-    margin-bottom: 50px;
-    &__main-block {
-    }
-}
 .main-block {
-    &__container {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__info {
-    }
-    &__title {
+	background-color: #fff;
+	padding-bottom: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+  }
+
+  &__title {
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 31px;
-    }
-    &__text {
+  }
+
+  &__text {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 30px;
-    }
-    &__list {
-        margin-bottom: 34px;
-    }
-    &__item {
+  }
+
+  &__list {
+    margin-bottom: 34px;
+  }
+
+  &__item {
     display: flex;
     gap: 5px;
     font-weight: 500;
     line-height: 20px;
-    }
-    &__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
-    &__item::after {
-        content: url('../../img/header/check-white.svg');
-        position: absolute;
-        opacity: 1;
-        transition: all 1s ease;
-    }
-    &__item:hover::after {
-        opacity: 0;
-        z-index: 2;
-    }
-    &__item::before {
-        content: url('../../img/header/check-blue.svg');
-        opacity: 0;
-        transition: all 1s ease;
-    }
-    &__item:hover::before {
-        opacity: 1;
-        z-index: 2;
-    }
+  }
 
-    &__socials {
-        display: flex;
-        gap: 15px;
-    }
-    &__img {
-    }
-    &__button {
-        position: absolute;
-        top: 50%;
-        right: 88%;
-        
-        background-color: var(--accent-color);
-        color: #fff;
-        text-align: center;
-        font-family: var(--font-secondary);
-        padding: 64px 27px;
-        border-radius: 50%;
-        outline-offset: 15px;
-        outline: 1px solid rgb(0, 0, 255, 0.3);
-        transition: all .1s ease;
-    }
-    &__button:active {
-        outline-offset: 5px;
-    }
-    &__box {
-        position: relative;
-        min-width: 650px;
-        min-height: 540px;
-    }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__item::after {
+    content: url("../../img/header/check-white.svg");
+    position: absolute;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  &__item:hover::after {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__item::before {
+    content: url("../../img/header/check-blue.svg");
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  &__item:hover::before {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__img {
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 88%;
+
+    background-color: var(--accent-color);
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-secondary);
+    padding: 64px 27px;
+    border-radius: 50%;
+    outline-offset: 15px;
+    outline: 1px solid rgb(0, 0, 255, 0.3);
+    transition: all 0.1s ease;
+  }
+
+  &__button:active {
+    outline-offset: 5px;
+  }
+	
+  &__box {
+    position: relative;
+    min-width: 650px;
+    min-height: 540px;
+  }
 }
