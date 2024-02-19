@@ -37,27 +37,13 @@
     margin-bottom: 10px;
   }
 
-  &__item::after {
-    content: url("../../img/header/check-white.svg");
-    position: absolute;
-    opacity: 1;
-    transition: all 1s ease;
-  }
-
-  &__item:hover::after {
-    opacity: 0;
-    z-index: 2;
-  }
-
   &__item::before {
-    content: url("../../img/header/check-blue.svg");
-    opacity: 0;
-    transition: all 1s ease;
+    content: url("../../img/header/check-white.svg");
   }
 
-  &__item:hover::before {
-    opacity: 1;
-    z-index: 2;
+  &__item:nth-child(1)::after {
+    content: url("../../img/header/check-blue.svg");
+    position: absolute;
   }
 
   &__socials {
@@ -72,20 +58,26 @@
     position: absolute;
     top: 50%;
     right: 88%;
-
     background-color: var(--accent-color);
     color: #fff;
     text-align: center;
     font-family: var(--font-secondary);
     padding: 64px 27px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    outline-offset: 15px;
-    outline: 1px solid rgb(0, 0, 255, 0.3);
-    transition: all 0.1s ease;
+    border: none;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    outline: none;
+    z-index: 1000;
+    transition: all 1s ease;
   }
 
-  &__button:active {
-    outline-offset: 5px;
+  &__button:hover {
+    padding: 67px 30px;
   }
 	
   &__box {
