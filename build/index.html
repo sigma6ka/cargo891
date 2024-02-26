@@ -70,7 +70,7 @@
     </div>
     <div class="main-block__box">
         <img class="main-block__img" src="../../../img/main-img.png" alt="background-image">
-            <button class="main-block__button">Получить<br>консультацию
+            <button class="main-block__button open-modal-btn">Получить<br>консультацию
             <span class="pulse-button__rings"></span>
             <span class="pulse-button__rings"></span>
             <span class="pulse-button__rings"></span>
@@ -80,6 +80,78 @@
     </div>
 </div>
 </section>
+	<section class="page__categories categories">
+    <div class="categories__container">
+      <h2 class="categories__title _title-2">
+        Предлагаем следующие <span>категории товаров</span>
+      </h2>
+      <div class="categories__items items-categories">
+        <!-- <Карточки> -->
+        <div class="items-categories__item">
+          <img src="../../../img/categories/img-1.jpeg" class="items-categories__img">
+          <div class="items-categories__box">
+            <h2 class="items-categories__title">Всесезонная одежда</h2>
+            <img class="up-right" src="../../../img/up-right.svg" alt="">
+          </div>
+        </div>
+
+        <div class="items-categories__item">
+            <img src="../../../img/categories/img-2.jpeg" class="items-categories__img">
+            <div class="items-categories__box">
+              <h2 class="items-categories__title">Всесезонная обувь</h2>
+              <img class="up-right" src="../../../img/up-right.svg" alt="">
+            </div>
+          </div>
+
+          <div class="items-categories__item">
+            <img src="../../../img/categories/img-3.jpeg" class="items-categories__img">
+            <div class="items-categories__box">
+              <h2 class="items-categories__title">Нижнее бельё</h2>
+              <img class="up-right" src="../../../img/up-right.svg" alt="">
+            </div>
+          </div>
+
+          <div class="items-categories__item">
+            <img src="../../../img/categories/img-4.jpeg" class="items-categories__img">
+            <div class="items-categories__box">
+              <h2 class="items-categories__title">Товары для дома</h2>
+              <img class="up-right" src="../../../img/up-right.svg" alt="">
+            </div>
+          </div>
+
+          <div class="items-categories__item">
+            <img src="../../../img/categories/img-5.jpeg" class="items-categories__img">
+            <div class="items-categories__box">
+              <h2 class="items-categories__title">Канцелярия</h2>
+              <img class="up-right" src="../../../img/up-right.svg" alt="">
+            </div>
+          </div>
+
+          <div class="items-categories__item">
+            <img src="../../../img/categories/img-6.jpeg" class="items-categories__img">
+            <div class="items-categories__box">
+              <h2 class="items-categories__title">Аксессуары</h2>
+              <img class="up-right" src="../../../img/up-right.svg" alt="">
+            </div>
+          </div>
+ 
+        <div class="items-categories__item">
+            <div class="items-categories__box">
+                <h2 class="items-categories__info">Информация</h2>
+                <img src="../../../img/categories/dots.svg" alt="dots">
+            </div>
+         <div class="items-categories__desc">
+            Идейные соображения высшего порядка, а также
+             высококачественный прототип будущего проекта является 
+             качественно новой ступенью системы обучения кадров,
+              соответствующей насущным потребностям.
+         </div>
+        </div>
+        <!-- </Карточки> -->
+      </div>
+    </div>
+  </section>
+  
 	<section class="page__advantages advantages">
   <div class="advantages__container">
     <h2 class="advantages__title _title-2">
@@ -131,6 +203,39 @@
   </div>
 </section>
 
+	<section class="page__process process">
+    <div class="process__container">
+        <h2 class="process__title _title-2">
+            Подробно объясним <span>процесс работы</span>
+        </h2>
+          <div class="process__items">
+            <div class="items-process">
+            <div class="items-process__item">
+                <div class="items-process__title">Заявка на сайте</div>
+                <div class="items-process__text">Краткое описание</div>
+            </div>
+            <div class="items-process__item">
+                <div class="items-process__title">Заявка на сайте</div>
+                <div class="items-process__text">Краткое описание</div>
+            </div>
+            <div class="items-process__item">
+                <div class="items-process__title">Заявка на сайте</div>
+                <div class="items-process__text">Краткое описание</div>
+            </div>
+          </div>
+        </div>
+          <div class="process__box box-process">
+            <div class="box-process__value">
+                <div class="box-process__title">Что входит в стоимость?</div>
+                <img src="../../../img/process/arrow-right.svg" alt="arrow">
+            </div>
+            <div class="box-process__forwho">
+                <div class="box-process__title">Кому будет интересно?</div>
+                <img src="../../../img/process/arrow-right.svg" alt="arrow">
+            </div>
+          </div>
+    </div>
+</section>
 	<section class="page__advantages advantages">
   <div class="advantages__container">
     <h2 class="advantages__title _title-2">
@@ -170,6 +275,7 @@
         </div>
         <div class="items-advantages__btn _btn-consultation">
           Проконсультироваться
+          <img src="../../../img/arrow-btn.svg">
         </div>
       </div>
       <!-- </Карточки> -->
@@ -292,6 +398,22 @@
 
     </div>
 </footer>
+    <div class="modal__box">
+    <form action="" class="modal__form modal-form">
+        <div class="modal-form__title">
+                    <div class="modal-form__title-text">Записаться на консультацию</div>
+                </div>
+        <div class="modal-form__content">
+            <input type="text" class="modal-form__input" placeholder="Ваше имя" />
+            <input type="text" class="modal-form__input" placeholder="Ваша фамилия" />
+            <input type="tel" class="modal-form__input" placeholder="Ваш номер телефона" />
+          <div class="modal-form__box">
+            <button class="modal-form__btn _btn-consultation">Отправить заявку</button>
+            <div class="modal-form__desc">Мы свяжемся с вами в ближайшее время для уточнения деталей и назначения консультации. Благодарим за обращение!</div>
+          </div>
+        </div>
+      </form>
+  </div>
     <script src="./js/index.bundle.js"></script>
 </body>
 </html>

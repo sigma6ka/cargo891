@@ -1,0 +1,118 @@
+.page {
+  &__process {
+  }
+}
+.process {
+  &__container {
+  }
+  &__title {
+    margin-bottom: 100px;
+  }
+  &__items {
+  }
+  &__box {
+    font-family: var(--font-secondary);
+
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.items-process {
+  display: flex;
+  flex-direction: column;
+  row-gap: 31px;
+  position: relative;
+  margin-bottom: 50px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--secondary-text-color);
+    opacity: 0.5;
+  }
+  &__item {
+    padding: 50px 265px 124px 50px;
+    border-radius: 6px;
+    background-color: #fff;
+
+    line-height: 29px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s, opacity 1s;
+  }
+  &__item:nth-child(n + 2) {
+    transform: translateY(50px);
+    transition: transform 2s, opacity 2s;
+  }
+
+  &__item:nth-child(odd):after {
+    content: "";
+    background: url("../../img/point.svg");
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 126%;
+    z-index: 2;
+  }
+
+  &__item:nth-child(even):before {
+    content: "";
+    background: url("../../img/point.svg");
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 126%;
+    z-index: 2;
+  }
+  & > *:nth-child(odd) {
+    align-self: flex-start;
+  }
+
+  & > *:nth-child(even) {
+    align-self: flex-end;
+  }
+  &__title {
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+  }
+}
+.box-process {
+  &__value {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+  &__title {
+  }
+  &__forwho {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+}
