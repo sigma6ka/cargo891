@@ -1,16 +1,37 @@
-<div class="modal__box">
-    <form action="" class="modal__form modal-form">
-        <div class="modal-form__title">
-                    <div class="modal-form__title-text">Записаться на консультацию</div>
-                </div>
-        <div class="modal-form__content">
-            <input type="text" class="modal-form__input" placeholder="Ваше имя" />
-            <input type="text" class="modal-form__input" placeholder="Ваша фамилия" />
-            <input type="tel" class="modal-form__input" placeholder="Ваш номер телефона" />
-          <div class="modal-form__box">
-            <button class="modal-form__btn _btn-consultation">Отправить заявку</button>
-            <div class="modal-form__desc">Мы свяжемся с вами в ближайшее время для уточнения деталей и назначения консультации. Благодарим за обращение!</div>
-          </div>
+<div class="modal">
+  <form action="" class="modal__form modal-form">
+    <div class="modal-form__title">
+      <div class="modal-form__title-text">Записаться на консультацию</div>
+    </div>
+    <div class="modal-form__content">
+      <div class="input-box">
+        <input type="text" class="modal-form__input" placeholder="Ваше имя" />
+      </div>
+      <div class="input-box">
+        <input
+          type="text"
+          class="modal-form__input"
+          placeholder="Ваша фамилия"
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="tel"
+          class="modal-form__input"
+          placeholder="Ваш номер телефона"
+        />
+      </div>
+      <div class="modal-form__box">
+        <button type="submit" class="modal-form__btn _btn-consultation">
+          Отправить заявку
+        </button>
+        <div class="modal-form__desc">
+          Мы свяжемся с вами в ближайшее время для уточнения деталей и
+          назначения консультации. Благодарим за обращение!
         </div>
-      </form>
-  </div>
+      </div>
+    </div>
+  </form>
+  <img class="close-modal-btn" src="img/close-modal.svg" alt="close" />
+</div>
+<div class="overlay js-overlay-modal"></div>

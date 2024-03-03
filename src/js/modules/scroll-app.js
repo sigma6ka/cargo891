@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let blocks = document.querySelectorAll('.items-process__item');
- 
     function checkBlocksVisibility() {
         let windowHeight = window.innerHeight;
- 
         blocks.forEach(block => {
             let blockPosition = block.getBoundingClientRect().top;
  
@@ -13,9 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
- 
     checkBlocksVisibility();
- 
     window.addEventListener('scroll', function() {
         checkBlocksVisibility();
     });

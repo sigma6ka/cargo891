@@ -193,7 +193,7 @@
 					"Проконсультироваться" прямо сейчас и наши специалисты свяжутся с
 					вами в ближайшее время!
 				</div>
-				<a class="items-advantages__btn _btn-consultation" href="#!">
+				<a class="items-advantages__btn _btn-consultation open-modal-btn" href="#!">
           Проконсультироваться
           <img src="../../../img/arrow-btn.svg">
         </a>
@@ -204,38 +204,63 @@
 </section>
 
 	<section class="page__process process">
-    <div class="process__container">
-        <h2 class="process__title _title-2">
-            Подробно объясним <span>процесс работы</span>
-        </h2>
-          <div class="process__items">
-            <div class="items-process">
-            <div class="items-process__item">
-                <div class="items-process__title">Заявка на сайте</div>
-                <div class="items-process__text">Краткое описание</div>
-            </div>
-            <div class="items-process__item">
-                <div class="items-process__title">Заявка на сайте</div>
-                <div class="items-process__text">Краткое описание</div>
-            </div>
-            <div class="items-process__item">
-                <div class="items-process__title">Заявка на сайте</div>
-                <div class="items-process__text">Краткое описание</div>
-            </div>
+  <div class="process__container">
+    <h2 class="process__title _title-2">
+      Подробно объясним <span>процесс работы</span>
+    </h2>
+    <div class="timeline">
+      <ul class="process__items items-process">
+        <li class="items-process__item">
+          <div class="content">
+            <h3 class="items-process__title">Заявка на сайте</h3>
+            <p class="items-process__text">Краткое описание</p>
           </div>
-        </div>
-          <div class="process__box box-process">
-            <div class="box-process__value">
-                <div class="box-process__title">Что входит в стоимость?</div>
-                <img src="../../../img/process/arrow-right.svg" alt="arrow">
-            </div>
-            <div class="box-process__forwho">
-                <div class="box-process__title">Кому будет интересно?</div>
-                <img src="../../../img/process/arrow-right.svg" alt="arrow">
-            </div>
+        </li>
+        <li class="items-process__item">
+          <div class="content">
+            <h3 class="items-process__title">Заявка на сайте</h3>
+            <p class="items-process__text">Краткое описание</p>
           </div>
+        </li>
+        <li class="items-process__item">
+          <div class="content">
+            <h3 class="items-process__title">Заявка на сайте</h3>
+            <p class="items-process__text">Краткое описание</p>
+          </div>
+        </li>
+      </ul>
+      <div style="clear: both"></div>
     </div>
+    <div class="process__box box-process">
+      <div class="box-process__value">
+        <div class="box-process__title">Что входит в стоимость?</div>
+        <img data-id="1" src="../../../img/process/arrow-right.svg" alt="arrow" />
+      </div>
+      <div class="box-process__for">
+        <div class="box-process__forwho">
+          <div class="box-process__title">Кому будет интересно?</div>
+          <img data-id="2" src="../../../img/process/arrow-right.svg" alt="arrow" />
+        </div>
+        <div class="box-process__items">
+            <div class="box-process__items-title">Оптовым покупателям</div>
+            <div class="box-process__items-text">
+              Таким образом постоянный количественный рост и сфера нашей
+              активности требуют, рост и сфера нашей активности требуют
+            </div>
+
+            <div class="box-process__items-title">
+              Индивидуальным предпринимателям
+            </div>
+            <div class="box-process__items-text">
+              Таким образом постоянный количественный рост и сфера нашей
+              активности требуют, рост и сфера нашей активности требуют
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 	<section class="page__advantages advantages">
   <div class="advantages__container">
     <h2 class="advantages__title _title-2">
@@ -273,7 +298,7 @@
           "Проконсультироваться" прямо сейчас и наши специалисты свяжутся с вами
           в ближайшее время!
         </div>
-        <div class="items-advantages__btn _btn-consultation">
+        <div class="items-advantages__btn _btn-consultation open-modal-btn">
           Проконсультироваться
           <img src="../../../img/arrow-btn.svg">
         </div>
@@ -392,28 +417,50 @@
   </div>
 </section>
 
+	<div class="modal">
+  <form action="" class="modal__form modal-form">
+    <div class="modal-form__title">
+      <div class="modal-form__title-text">Записаться на консультацию</div>
+    </div>
+    <div class="modal-form__content">
+      <div class="input-box">
+        <input type="text" class="modal-form__input" placeholder="Ваше имя" />
+      </div>
+      <div class="input-box">
+        <input
+          type="text"
+          class="modal-form__input"
+          placeholder="Ваша фамилия"
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="tel"
+          class="modal-form__input"
+          placeholder="Ваш номер телефона"
+        />
+      </div>
+      <div class="modal-form__box">
+        <button type="submit" class="modal-form__btn _btn-consultation">
+          Отправить заявку
+        </button>
+        <div class="modal-form__desc">
+          Мы свяжемся с вами в ближайшее время для уточнения деталей и
+          назначения консультации. Благодарим за обращение!
+        </div>
+      </div>
+    </div>
+  </form>
+  <img class="close-modal-btn" src="img/close-modal.svg" alt="close" />
+</div>
+<div class="overlay js-overlay-modal"></div>
+
 </main>
     <footer class="footer">
     <div class="footer__container">
 
     </div>
 </footer>
-    <div class="modal__box">
-    <form action="" class="modal__form modal-form">
-        <div class="modal-form__title">
-                    <div class="modal-form__title-text">Записаться на консультацию</div>
-                </div>
-        <div class="modal-form__content">
-            <input type="text" class="modal-form__input" placeholder="Ваше имя" />
-            <input type="text" class="modal-form__input" placeholder="Ваша фамилия" />
-            <input type="tel" class="modal-form__input" placeholder="Ваш номер телефона" />
-          <div class="modal-form__box">
-            <button class="modal-form__btn _btn-consultation">Отправить заявку</button>
-            <div class="modal-form__desc">Мы свяжемся с вами в ближайшее время для уточнения деталей и назначения консультации. Благодарим за обращение!</div>
-          </div>
-        </div>
-      </form>
-  </div>
     <script src="./js/index.bundle.js"></script>
 </body>
 </html>

@@ -88,3 +88,8 @@ label {
 legend {
 	display: block;
 }
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
