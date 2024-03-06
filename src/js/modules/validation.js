@@ -1,29 +1,60 @@
-function validation(form) {
+const forms = () => {
+    const form = document.querySelectorAll('.modal-form'),
+          inputs = document.querySelectorAll('.modal-form__input'),
+          phoneInputs = document.querySelector('.modal-phone');
 
-    function createError(input, text) {
-        const parent = input.parentNode;
-        parent.classList.add('error')
-        console.log(parent)
-    }
+    phoneInputs.forEach(item => {
+        item.addEventListener('input', () => {
+            item.value = item.value.replace(/\D/, '');
+        });
+    });
+    
+    const message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так...'
+    };
 
+    const postData = async (url, data) => {
+        document.querySelector('.status').textContent = message.loading;
+        let res = await fetch(url, {
+            method: "POST",
+            body: data
+        });
 
-    let result = true
+        return await res.text();
+    };
 
-    const allInputs = form.querySelector('input')
+    const clearInputs = () => {
+        inputs.forEach(item => {
+            item.value = '';
+        });
+    };
 
-    for(const input of allInputs) {
-        if(input.value == '') {
-            console.log('ошибка поля')
-            createError(input, 'Поле не заполнено!')
-            result = false
-        }
-    }
-    return result
-}
+    form.forEach(item => {
+        item.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-document.querySelector('modal-form').addEventListener('submit', (event) => {
-    event.preventDefault();
-    if(validation(this) == true) {
+            let statusMessage = document.createElement('div');
+            statusMessage.classList.add('status');
+            item.appendChild(statusMessage);
 
-    }
-})
+            const formData = new FormData(item);
+
+            postData('assets/server.php', formData)
+                .then(res => {
+                    console.log(res);
+                    statusMessage.textContent = message.success;
+                })
+                .catch(() => statusMessage.textContent = message.failure)
+                .finally(() => {
+                    clearInputs();
+                    setTimeout(() => {
+                        statusMessage.remove();
+                    }, 5000);
+                });
+        });
+    });
+};
+
+export default forms;
