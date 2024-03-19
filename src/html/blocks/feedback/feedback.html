@@ -15,11 +15,13 @@
               type="text"
               class="feedback-form__input"
               placeholder="Ваше имя"
+              required
             />
             <input
               type="text"
               class="feedback-form__input"
               placeholder="Ваша фамилия"
+              required
             />
           </div>
           <div class="feedback-form__inputs">
@@ -27,6 +29,9 @@
               type="tel"
               class="feedback-form__input feedback-phone"
               placeholder="Ваш номер телефона"
+              required
+              min="10"
+              max="11"
             />
             <input
               type="email"

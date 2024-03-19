@@ -1,60 +1,38 @@
-const forms = () => {
-    const form = document.querySelectorAll('.modal-form'),
-          inputs = document.querySelectorAll('.modal-form__input'),
-          phoneInputs = document.querySelector('.modal-phone');
+const modalForm = document.querySelector('.modal-form'),
+feedbackForm = document.querySelector('.feedback-form'),
+successModal = document.querySelector('.modal__sucess'),
+modal = document.querySelector('.modal');
 
-    phoneInputs.forEach(item => {
-        item.addEventListener('input', () => {
-            item.value = item.value.replace(/\D/, '');
-        });
-    });
-    
-    const message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Скоро мы с вами свяжемся',
-        failure: 'Что-то пошло не так...'
-    };
+function validation() {
+    modalForm.addEventListener('submit',(event) => {
+    event.preventDefault();
+    const modalInputs = document.querySelectorAll('.modal-form__input');
+    modalInputs.forEach(input => {
+        if(input.value === '') {
+            input.classList.add('warn');
+        } else {
+            successModal.classList.add('active');
+            modalForm.style.display = 'none';
+            successModal.style.display = 'block';
+        }
+    })
+})
 
-    const postData = async (url, data) => {
-        document.querySelector('.status').textContent = message.loading;
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
+feedbackForm.addEventListener('submit',(event) => {
+    event.preventDefault();
+    const feedbackInputs = document.querySelectorAll('.feedback-form__input');
+    feedbackInputs.forEach(input => {
+        if(input.value === '') {
+            input.classList.add('warn');
+        }
+    })
+})
+}
 
-        return await res.text();
-    };
+const phoneMask = document.querySelector('.modal-phone');
+IMask(
+    phoneMask,
+    {mask : '+{7} (000) 000-00-00'}
+);
 
-    const clearInputs = () => {
-        inputs.forEach(item => {
-            item.value = '';
-        });
-    };
-
-    form.forEach(item => {
-        item.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            let statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-            item.appendChild(statusMessage);
-
-            const formData = new FormData(item);
-
-            postData('assets/server.php', formData)
-                .then(res => {
-                    console.log(res);
-                    statusMessage.textContent = message.success;
-                })
-                .catch(() => statusMessage.textContent = message.failure)
-                .finally(() => {
-                    clearInputs();
-                    setTimeout(() => {
-                        statusMessage.remove();
-                    }, 5000);
-                });
-        });
-    });
-};
-
-export default forms;
+validation();
